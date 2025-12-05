@@ -53,7 +53,7 @@ class _SignUpPageState extends State<SignUpPage> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.blue[900]!, Colors.blue[700]!], // Royal blue gradient
+            colors: [Colors.white, Colors.green], // Royal blue gradient
           ),
         ),
         child: Center(
@@ -73,7 +73,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       const Text(
                         'Sign Up',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.blueAccent),
+                        style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.green),
                       ),
                       const SizedBox(height: 20.0),
                       TextField(
@@ -81,15 +81,15 @@ class _SignUpPageState extends State<SignUpPage> {
                         decoration: InputDecoration(
                           labelText: "Username",
                           labelStyle: TextStyle(color: Colors.blue[900]),
-                          prefixIcon: Icon(Icons.person, color: Colors.blue[900]),
+                          prefixIcon: Icon(Icons.person, color: Colors.green),
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                           ),
                         ),
@@ -101,15 +101,15 @@ class _SignUpPageState extends State<SignUpPage> {
                         decoration: InputDecoration(
                           labelText: "Password",
                           labelStyle: TextStyle(color: Colors.blue[900]),
-                          prefixIcon: Icon(Icons.lock, color: Colors.blue[900]),
+                          prefixIcon: Icon(Icons.lock, color: Colors.green),
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                           ),
                         ),
@@ -120,15 +120,15 @@ class _SignUpPageState extends State<SignUpPage> {
                         decoration: InputDecoration(
                           labelText: "NID Number",
                           labelStyle: TextStyle(color: Colors.blue[900]),
-                          prefixIcon: Icon(Icons.card_membership, color: Colors.blue[900]),
+                          prefixIcon: Icon(Icons.card_membership, color: Colors.green),
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                           ),
                         ),
@@ -139,15 +139,15 @@ class _SignUpPageState extends State<SignUpPage> {
                         decoration: InputDecoration(
                           labelText: "Date of Birth (YYYY-MM-DD)",
                           labelStyle: TextStyle(color: Colors.blue[900]),
-                          prefixIcon: Icon(Icons.calendar_today, color: Colors.blue[900]),
+                          prefixIcon: Icon(Icons.calendar_today, color: Colors.green),
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                           ),
                         ),
@@ -158,15 +158,15 @@ class _SignUpPageState extends State<SignUpPage> {
                         decoration: InputDecoration(
                           labelText: "Phone Number",
                           labelStyle: TextStyle(color: Colors.blue[900]),
-                          prefixIcon: Icon(Icons.phone, color: Colors.blue[900]),
+                          prefixIcon: Icon(Icons.phone, color: Colors.green),
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                           ),
                         ),
@@ -177,15 +177,15 @@ class _SignUpPageState extends State<SignUpPage> {
                         decoration: InputDecoration(
                           labelText: "Email",
                           labelStyle: TextStyle(color: Colors.blue[900]),
-                          prefixIcon: Icon(Icons.email, color: Colors.blue[900]),
+                          prefixIcon: Icon(Icons.email, color: Colors.green),
                           filled: true,
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(5),
                             borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                           ),
                         ),
@@ -193,24 +193,24 @@ class _SignUpPageState extends State<SignUpPage> {
                       const SizedBox(height: 20.0),
                       _imageBytes == null
                           ? const Text("No image selected.", textAlign: TextAlign.center)
-                          : Image.memory(_imageBytes!, height: 80, width: 80, fit: BoxFit.cover),
+                          : Image.memory(_imageBytes!, height: 80, width: 80, fit: BoxFit.contain),
                       const SizedBox(height: 10.0),
                       ElevatedButton(
                         onPressed: _pickImage,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue[900],
+                          backgroundColor: Colors.green,
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                         ),
-                        child: const Text("Pick Image (80x80)", style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                        child: const Text("Pick Image (80x80 px)", style: TextStyle(fontSize: 18.0, color: Colors.white)),
                       ),
                       const SizedBox(height: 24.0),
                       ElevatedButton(
                         onPressed: _signUp,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue[900],
+                          backgroundColor: Colors.green,
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                         ),
                         child: const Text("Sign Up", style: TextStyle(fontSize: 18.0, color: Colors.white)),
                       ),

@@ -41,7 +41,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.blue[900]!, Colors.blue[700]!], // Royal blue gradient
+            colors: [Colors.white, Colors.green], // Royal blue gradient
           ),
         ),
         child: Center(
@@ -60,7 +60,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     const Text(
                       'Forgot Password',
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.blueAccent),
+                      style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.green),
                     ),
                     const SizedBox(height: 20.0),
                     TextField(
@@ -68,15 +68,15 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                       decoration: InputDecoration(
                         labelText: "NID Number",
                         labelStyle: TextStyle(color: Colors.blue[900]),
-                        prefixIcon: Icon(Icons.card_membership, color: Colors.blue[900]),
+                        prefixIcon: Icon(Icons.card_membership, color: Colors.green),
                         filled: true,
                         fillColor: Colors.white,
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12.0),
+                          borderRadius: BorderRadius.circular(5),
                           borderSide: BorderSide(color: Colors.blue[900]!),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12.0),
+                          borderRadius: BorderRadius.circular(5),
                           borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                         ),
                       ),
@@ -85,9 +85,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     ElevatedButton(
                       onPressed: _retrieveUsername,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue[900],
+                        backgroundColor: Colors.green,
                         padding: const EdgeInsets.symmetric(vertical: 16.0),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                       ),
                       child: const Text("Retrieve Username", style: TextStyle(fontSize: 18.0, color: Colors.white)),
                     ),

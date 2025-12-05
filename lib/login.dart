@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.blue[900]!, Colors.blue[700]!], // Royal blue gradient
+            colors: [Colors.white10, Colors.green], // Royal blue gradient
           ),
         ),
         child: Center(
@@ -54,23 +54,23 @@ class _LoginPageState extends State<LoginPage> {
                     const Text(
                       'ঢাকা মেট্রো সেবা',
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.blueAccent),
+                      style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.green),
                     ),
                     const SizedBox(height: 20.0),
                     TextField(
                       controller: usernameController,
                       decoration: InputDecoration(
                         labelText: "Username",
-                        labelStyle: TextStyle(color: Colors.blue[900]), // Royal blue label
-                        prefixIcon: Icon(Icons.person, color: Colors.blue[900]),
+                        labelStyle: TextStyle(color: Colors.black), // Royal blue label
+                        prefixIcon: Icon(Icons.person, color: Colors.lightGreen),
                         filled: true,
                         fillColor: Colors.white, // White field background
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12.0),
+                          borderRadius: BorderRadius.circular(5),
                           borderSide: BorderSide(color: Colors.blue[900]!),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12.0),
+                          borderRadius: BorderRadius.circular(5),
                           borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                         ),
                       ),
@@ -81,16 +81,16 @@ class _LoginPageState extends State<LoginPage> {
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: "Password",
-                        labelStyle: TextStyle(color: Colors.blue[900]),
-                        prefixIcon: Icon(Icons.lock, color: Colors.blue[900]),
+                        labelStyle: TextStyle(color: Colors.black),
+                        prefixIcon: Icon(Icons.lock, color: Colors.lightGreen),
                         filled: true,
                         fillColor: Colors.white,
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12.0),
+                          borderRadius: BorderRadius.circular(5),
                           borderSide: BorderSide(color: Colors.blue[900]!),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12.0),
+                          borderRadius: BorderRadius.circular(5),
                           borderSide: BorderSide(color: Colors.blue[900]!, width: 2.0),
                         ),
                       ),
@@ -99,19 +99,19 @@ class _LoginPageState extends State<LoginPage> {
                     ElevatedButton(
                       onPressed: _login,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue[900], // Royal blue button
+                        backgroundColor: Colors.green, // Royal blue button
                         padding: const EdgeInsets.symmetric(vertical: 16.0),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                       ),
                       child: const Text("Login", style: TextStyle(fontSize: 18.0, color: Colors.white)),
                     ),
                     TextButton(
-                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ForgotPasswordPage())),
-                      child: Text("Forgot Password?", style: TextStyle(color: Colors.blue[900])),
+                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SignUpPage())),
+                      child: Text("Sign Up", style: TextStyle(color: Colors.black54)),
                     ),
                     TextButton(
-                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SignUpPage())),
-                      child: Text("Sign Up", style: TextStyle(color: Colors.blue[900])),
+                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ForgotPasswordPage())),
+                      child: Text("Forgot Password?", style: TextStyle(color: Colors.black54)),
                     ),
                   ],
                 ),
